@@ -1,154 +1,165 @@
- [Man o' War] COMMANDS
- "shutdown"   - shuts down the windows system
- "shutlist"   - shut down list of computers with ADDS.
- "logoff"     - logs off from the windows system
- "cls"        - clears the screen of the terminal
- "color"      - set a given terminal colour to the terminal
- "abort"      - exits the current program
- "dt"         - shows the current date and time
- "wr"         - show weather report
- "dp"         - duplicate Man O' War terminal program
- "eleval"     - enter errorlevel testing mode
-
- [Logging]
- "la"         - enable program commands activity logging
- "dal"        - dissable program commands activity logging
- "wao"        - enable write all outputs to file
- "dwao"       - disable write all outputs to file
- "syslog"     - inspect system logs
-
- [Custom Notes]
- "cnf"        - create personal note file in current folder
- "enf"        - edit personal note file in current folder
- "dnf"        - delete personal note file in current folder
-
- [Directory and Volumes]
- "showrd"     - shows root drives
- "showdt"     - shows directory tree
- "showin"     - show all installed programs
- "mkdir"      - makes a new directory
-
- [Files]
- "expelf"     - delete a file
- "cpf"        - copy a file
- "mvf"        - move a file
- "scf"        - show contents of current folder
- "lf"         - locate a file
- "lfe"        - locate files with specific file extension
- "asc"        - show file extension association
- "lasc"       - show file associations in system
- "wat"        - scan and show present file extensions
- "sfc"        - show content and free space of a folder or drive 
- "gc"         - show content of a file
- "ef"         - edit the content of a file
-
- [System and Hardware Information]
- "gcpu"       - shows cpu information
- "bcd"        - show boot configuration data
- "sss"        - show system statistics
-
- [battery and powerschemes]
- "sps"        - show power schemes
- "dps"        - delete powerscheme
- "cps"        - create powerscheme
-
- [Windows License]
- "gli"        - show info about windows license
- "awl"        - activate a Windows license product key
-
- [Ports]
- "op"         - open port
- "cp"         - close port
-
- [Remote Access]
- "rdpe"       - enable remote desktop logon
- "rdpd"       - disable remote desktop logon
-
- [network management]
- "ipc"        - shows current IP configuration
- "netinface"  - show current network interfaces
- "ipv4"       - change the ipv4 adress, netmask, or dfgw of a network interface
- "ipv6"       - change the ipv6 adress, netmask, or dfgw of a network interface
- "mac"        - change the mac adress
- "dns"        - change the dns server in ipv4 format
- "dnshex"     - change the dns server in ipv6 format [#construction]
- "portinfo"   - shows portnumbers and info
- "ltp"        - find connection to process link
- "netmask"    - shows netmasks and info
- "ipv4info"   - shows IPv4-Adress classes and types
- "wlani"      - shows wlan information
- "tracert"    - trace ip-adress or domain name route
- "pingip"     - ping an ip-adress or domain name
- "geolocate"  - geolocate a public ip-adress.
-
- [Websites and resolve]
- "getsh"      - get HTTP site headers
- "checkrslv"  - check DNS resolve from google DNS
- "checkhand"  - check TLS/SSL info aka handshake details
- "checkhc"    - inspect HTTP status codes
-
- [System Services and Tasks]
- "lss"        - list all system services
- "las"        - list running system services
- "srs"        - stop running service
- "irs"        - start a service
- "stl"        - show running programs
- "kt"         - kill a running program
- "st"         - start a program
-
- [System Firewall]
- "gf"         - shows current firewall rules
- "ifr"        - inbound firewall rules
- "ofr"        - outbound firewall rules
- "gfp"        - show firewall profile info
- "gcp"        - show current firewall profile
- "cfr"        - create a firewall rule
- "dfr"        - delete a firewall rule
-
- [Saved Credentials]
- "rwp"        - recover wlan passwords
-
- [Windows Registry]
- "ri"         - registry inspection
-
- [Users and Groups]
- "guse"       - show users
- "slg"        - show local groups
- "iuse"       - show info about specific user
- "cu"         - create a user
- "du"         - delete a user
- "ca"         - create an administrator
- "clg"        - create local group
- "dlg"        - delete local group
- "astg"       - assign user to group
- "dufg"       - delete user from group
-
- [Group Policys]
- "udgp"       - update group policys
- "rsop"       - show RSoP summary data
-
- [CMD and POWERSHELL]
- "cmd"        - execute custom cmd command
- "spc"        - send powershell command to host
- "erp"        - enable WinRM for powershell remoting
- "derp"       - disable WinRM for powershell remoting
-
- [SDR and Radio]
- "getiss"     - get geolocation of international space station
- "revgeoloc"  - reverse geolocate with latitude and longitude
-
- [Cheat Sheets]
- "batchecho"  - tool to implement cheatsheets
- "nmap"       - shows nmap commands
- "hydra"      - shows hydra commands
- "bettercap"  - shows bettercap commands
-
- [Text to Speech]
- "spke"       - speak english
-
- [Advice]
- "giveadvice" - give a random advice
- "telljoke"   - tells a random dad joke
-
- [credits and cooperation]
- "showcreds"  - shows program credits
+echo [Man o' War]   COMMANDS   [use ctrl + C to escape a function]
+echo "shutdown"   - shuts down the windows system
+echo "shutlist"   - shut down list of computers with ADDS.
+echo "logoff"     - logs off from the windows system
+echo "cls"        - clears the screen of the terminal
+echo "color"      - set a given terminal colour to the terminal
+echo "abort"      - exits the current program
+echo "dt"         - shows the current date and time
+echo "wr"         - show weather report
+echo "dp"         - duplicate Man O' War terminal program
+echo "eleval"     - enter errorlevel testing mode
+echo.
+echo [Logging]
+echo "la"         - enable program commands activity logging
+echo "dal"        - dissable program commands activity logging
+echo "wao"        - enable write all outputs to file
+echo "dwao"       - disable write all outputs to file
+echo "syslog"     - inspect system logs
+echo.
+echo [Custom Notes]
+echo "cnf"        - create personal note file in current folder
+echo "enf"        - edit personal note file in current folder
+echo "dnf"        - delete personal note file in current folder
+echo.
+echo [Directory and Volumes]
+echo "showrd"     - shows root drives
+echo "showdt"     - shows directory tree
+echo "showin"     - show all installed programs
+echo "mkdir"      - makes a new directory
+echo.
+echo [Files]
+echo "expelf"     - delete a file
+echo "cpf"        - copy a file
+echo "mvf"        - move a file
+echo "scf"        - show contents of current folder
+echo "lf"         - locate a file
+echo "lfe"        - locate files with specific file extension
+echo "asc"        - show file extension association
+echo "lasc"       - show file associations in system
+echo "wat"        - scan and show present file extensions
+echo "sfc"        - show content and free space of a folder or drive 
+echo "gc"         - show content of a file
+echo "ef"         - edit the content of a file
+echo.
+echo [System and Hardware Information]
+echo "gcpu"       - shows cpu information
+echo "bcd"        - show boot configuration data
+echo "sss"        - show system statistics
+echo.
+echo [battery and powerschemes]
+echo "sps"        - show power schemes
+echo "dps"        - delete powerscheme
+echo "cps"        - create powerscheme
+echo.
+echo [Windows License]
+echo "gli"        - show info about windows license
+echo "awl"        - activate a Windows license product key
+echo.
+echo [Ports]
+echo "op"         - open port
+echo "cp"         - close port
+echo.
+echo [Remote Access]
+echo "rdpe"       - enable remote desktop logon
+echo "rdpd"       - disable remote desktop logon
+echo.
+echo [network management]
+echo "ipc"        - shows current IP configuration
+echo "netinface"  - show current network interfaces
+echo "pubip"      - fetch your public ip-adress
+echo "myhostnm"   - fetch your external hostname
+echo "ipv4"       - change the ipv4 adress, netmask, and dfgw of a network interface
+echo "ipv6"       - change the ipv6 adress, netmask, and dfgw of a network interface
+echo "mac"        - change the mac adress
+echo "dns"        - change the dns server in ipv4 format
+echo "dnshex"     - change the dns server in ipv6 format [#construction]
+echo "portinfo"   - shows portnumbers and info
+echo "ltp"        - find connection to process link
+echo "netmask"    - shows netmasks and info
+echo "ipv4info"   - shows IPv4-Adress classes and types
+echo "wlani"      - shows wlan information
+echo "tracert"    - trace ip-adress or domain name route
+echo "pingip"     - ping an ip-adress or domain name
+echo "geolocate"  - geolocate a public ip-adress
+echo "asnispip"   - fetch ASN and ISP info of a public ip-adress
+echo "getbgpip"   - fetch BGP info of a public ip-adress
+echo "rdaptrack"  - fetch RDAP info of a public ip adress
+echo.
+echo [Websites and resolve]
+echo "getrevdns"  - get your own IP its reverse DNS
+echo "getsh"      - get HTTP site headers
+echo "checkrslv"  - check DNS resolve from google DNS
+echo "checkhand"  - check TLS/SSL info aka handshake details
+echo "checkciph"  - check TLS/SSL handshake and cipher
+echo "checkhc"    - inspect HTTP status codes
+echo.
+echo [System Services and Tasks]
+echo "lss"        - list all system services
+echo "las"        - list running system services
+echo "srs"        - stop running service
+echo "irs"        - start a service
+echo "stl"        - show running programs
+echo "kt"         - kill a running program
+echo "st"         - start a program
+echo.
+echo [Treat Detection]
+echo "badurl"   - show URLs flagged with dangers that are online
+echo "badip"    - show IPs flagged with dangers
+echo.
+echo [System Firewall]
+echo "gf"         - shows current firewall rules
+echo "ifr"        - inbound firewall rules
+echo "ofr"        - outbound firewall rules
+echo "gfp"        - show firewall profile info
+echo "gcp"        - show current firewall profile
+echo "cfr"        - create a firewall rule
+echo "dfr"        - delete a firewall rule
+echo.
+echo [Saved Credentials]
+echo "rwp"        - recover wlan passwords
+echo.
+echo [Windows Registry]
+echo "ri"         - registry inspection
+echo.
+echo [Users and Groups]
+echo "guse"       - show users
+echo "slg"        - show local groups
+echo "iuse"       - show info about specific user
+echo "cu"         - create a user
+echo "du"         - delete a user
+echo "ca"         - create an administrator
+echo "clg"        - create local group
+echo "dlg"        - delete local group
+echo "astg"       - assign user to group
+echo "dufg"       - delete user from group
+echo.
+echo [Group Policys]
+echo "udgp"       - update group policys
+echo "rsop"       - show RSoP summary data
+echo.
+echo [CMD and POWERSHELL]
+echo "cmd"        - execute custom cmd command
+echo "spc"        - send powershell command to host
+echo "erp"        - enable WinRM for powershell remoting
+echo "derp"       - disable WinRM for powershell remoting
+echo.
+echo [SDR and Radio]
+echo "getiss"     - get geolocation of international space station
+echo "revgeoloc"  - reverse geolocate with latitude and longitude
+echo.
+echo [Cheat Sheets]
+echo "batchecho"  - tool to implement cheatsheets
+echo "nmap"       - shows nmap commands
+echo "hydra"      - shows hydra commands
+echo "bettercap"  - shows bettercap commands
+echo.
+echo [Text and Speech]
+echo "spke"       - speak english
+echo "askquest"   - ask a question
+echo "giveadvice" - give a random advice
+echo "telljoke"   - tells a random dad joke
+echo.
+echo [credits and cooperation]
+echo "showcreds"  - shows program credits
+echo.
