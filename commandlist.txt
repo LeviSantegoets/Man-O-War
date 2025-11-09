@@ -17,6 +17,20 @@
  "dwao"       - disable write all outputs to file
  "syslog"     - inspect system logs
 .
+ [Windows GUI utilities]
+ "mmc"        - microsoft management console
+ "mrt"        - windows gui malware scan
+ "msconfig"   - microsoft config gui
+ "taskmgr"    - task manager
+ "regeditor"  - registry editior
+ "sysserv"    - system services
+ "devmgmt"    - device management
+ "eventvi"    - event viewer
+ "gpeditor"   - group policy editor
+ "perfmon"    - preformance monitor
+ "compmgmt"   - computer management
+ "sysinfmgmt" - system information
+.
  [Custom Notes]
  "cnf"        - create personal note file in current folder
  "enf"        - edit personal note file in current folder
