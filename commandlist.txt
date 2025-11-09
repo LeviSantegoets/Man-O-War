@@ -73,7 +73,7 @@
  "ipv6"       - change the ipv6 adress, netmask, and dfgw of a network interface
  "mac"        - change the mac adress
  "dns"        - change the dns server in ipv4 format
- "dnshex"     - change the dns server in ipv6 format [#construction]
+ "dnshex"     - change the dns server in ipv6 format
  "portinfo"   - shows portnumbers and info
  "ltp"        - find connection to process link
  "netmask"    - shows netmasks and info
@@ -93,6 +93,7 @@
  "checkhand"  - check TLS/SSL info aka handshake details
  "checkciph"  - check TLS/SSL handshake and cipher
  "checkhc"    - inspect HTTP status codes
+ "fetchlinks" - fetch all used URLs from a webpage
 .
  [System Services and Tasks]
  "lss"        - list all system services
@@ -162,8 +163,14 @@
  "giveadvice" - give a random advice
  "telljoke"   - tells a random dad joke
 .
+ [Images and GIFs]
+ "findgif"    - finds a gif and shows it in the terminal
+.
  [News and information]
- "hackernews" - shows news for hackers ^~^~^(8:^>
+ "hackernews" - shows news for hackers
+.
+ [Fun and Rickrolls]
+ "initnyan"   - shows nyancat ascii animation
 .
  [credits and cooperation]
  "showcreds"  - shows program credits
