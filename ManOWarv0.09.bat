@@ -386,7 +386,7 @@ echo [News and information]
 echo "hackernews" - shows news for hackers
 echo.
 echo [Markets and Money]
-echo "gct"        - get crypto market curreny rates
+echo "gct"        - get market currency rates
 echo.
 echo [Fun and Rickrolls]
 echo "initnyan"   - shows nyancat ascii animation
@@ -433,12 +433,12 @@ goto catspallin
 :clearcurrencyterminalium
 cls
 :gctt
-echo calling crypto currency rates... Enter "X" to return to menu or "cls" to clear the terminal.
+echo calling currency rates from rate.sx... Enter "X" to return to menu or "cls" to clear the terminal.
 curl rate.sx
 IF %errorlevel%==1 (
-   echo Warning! The program failed to call crypto currency rates, make sure you have an internet connection.
+   echo Warning! The program failed to call currency rates from rate.sx, make sure you have an internet connection.
 ) ELSE (
-echo Success! The program succeeded to call crypto currency rates.
+echo Success! The program succeeded to call currency rates from  rate.sx.
 )
 :rewindgctt
 SET /P ctinspectc=Enter the currency to inspect e.g. [BTC] or Enter the interval specification e.g. [/btc@10d], [/eth@4w], [/xrp@January] or [/:help]:
@@ -447,9 +447,9 @@ IF %ctinspectc%==X echo "X" was given as value for last paramitter, returning to
 IF %ctinspectc%==x echo "x" was given as value for last paramitter, returning to mainframe. & goto catspallin
 IF %ctinspectc%==cls echo "cls" was given as value for last paramitter, clearing terminal. & goto clearcurrencyterminalium
 IF %errorlevel%==1 (
-   echo Warning! The program failed to call crypto currency rate flow, make sure you have an internet connection.
+   echo Warning! The program failed to call rate.sx, make sure you have an internet connection.
 ) ELSE (
-echo Success! The program succeeded to call crypto currency rate flow.
+echo Success! The program succeeded to call rate.sx.
 )
 goto rewindgctt
 
