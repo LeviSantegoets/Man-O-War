@@ -9,6 +9,7 @@
  "wr"         - show weather report
  "dp"         - duplicate Man O' War terminal program
  "eleval"     - enter errorlevel testing mode
+ "sshchat"    - chat with ssh via chat.shazow.net
 .
  [Logging]
  "la"         - enable program commands activity logging
@@ -99,6 +100,7 @@
  "asnispip"   - fetch ASN and ISP info of a public ip-adress
  "getbgpip"   - fetch BGP info of a public ip-adress
  "rdaptrack"  - fetch RDAP info of a public ip adress
+ "detectvlan" - fetch VLAN info of network interfaces
 .
  [Websites and resolve]
  "getrevdns"  - get your own IP its reverse DNS
@@ -183,8 +185,14 @@
  [News and information]
  "hackernews" - shows news for hackers
 .
+ [Markets and Money]
+ "gct"        - get crypto market curreny rates
+.
  [Fun and Rickrolls]
  "initnyan"   - shows nyancat ascii animation
+.
+ [Multiplayer and Singleplayer Games]
+ "playsnake"  - play snake multiplayer over SSH
 .
  [credits and cooperation]
  "showcreds"  - shows program credits
