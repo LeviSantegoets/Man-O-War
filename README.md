@@ -1,7 +1,7 @@
 Please note:
 
 when using this program you need the following utils:
-(because i am not a j***-***, i have made sure that everything the program uses is included in windows 11 or is installed during operation!!! and deleted after use for clean executions)
+(because i am not a j***-***, i made sure that everything the program uses is included in windows 11 or is installed during operation!!! and deleted after use for clean executions)
 >Powershell
 
 >SSH
