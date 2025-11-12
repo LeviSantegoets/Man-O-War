@@ -2,6 +2,7 @@
  "shutdown"   - shuts down the windows system
  "shutlist"   - shut down list of computers with ADDS.
  "logoff"     - logs off from the windows system
+ "reboot"     - force reboot the windows system
  "cls"        - clears the screen of the terminal
  "color"      - set a given terminal colour to the terminal
  "abort"      - exits the current program
@@ -101,6 +102,7 @@
  "getbgpip"   - fetch BGP info of a public ip-adress
  "rdaptrack"  - fetch RDAP info of a public ip adress
  "detectvlan" - fetch VLAN info of network interfaces
+ "getpackets" - fetch network packets with packetmon to .pcapng file
 .
  [Websites and resolve]
  "getrevdns"  - get your own IP its reverse DNS
@@ -186,14 +188,14 @@
  "hackernews" - shows news for hackers
 .
  [Markets and Money]
- "gct"        - get crypto market curreny rates
+ "gct"        - get market currency rates
 .
  [Fun and Rickrolls]
  "initnyan"   - shows nyancat ascii animation
 .
  [Multiplayer and Singleplayer Games]
  "playsnake"  - play snake multiplayer over SSH
+ "arcadegm"   - play various arcade games over SSH
 .
  [credits and cooperation]
  "showcreds"  - shows program credits
-.
