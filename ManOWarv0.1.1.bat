@@ -27,13 +27,13 @@ set "tempvbs=%TEMP%\manowarwelcomemsg.vbs"
 cscript //nologo "%tempvbs%"
 del /f /q "%tempvbs%" 2>nul
 REM PRESENT FUNCTION VARIABLE:
-SET functioncounts=136
+SET functioncounts=137
 SET logging=notdefinedd
 SET loggingoutput=notdefineddd
 IF EXIST %~dp0loggingmodeon.txt SET logging=on
 IF EXIST %~dp0loggingoutputmodeon.txt SET loggingoutput=on
 :clss
-set vrsion=v0.10
+set vrsion=v0.1.1
 title Man o' War %vrsion% - A library for commandline tools.
 echo  __    __     ______     __   __        ______   __   __     __     ______     ______    
 echo /\ "-./  \   /\  __ \   /\ "-.\ \      /\  __ \  \/  /\ \  _ \ \   /\  __ \   /\  == \  
@@ -195,6 +195,7 @@ IF %catspal%==netmask goto netmasks
 IF %catspal%==subnet goto netmasks
 IF %catspal%==subnetmask goto netmasks
 IF %catspal%==ipv4info goto ipainfos
+IF %catspal%==lansweep goto lansweepp
 IF %catspal%==wr goto wrs
 REM IF %catspal%==
 echo invalid syntaxis, type "help" or "h" for all options.
@@ -306,6 +307,7 @@ echo "getbgpip"   - fetch BGP info of a public ip-adress
 echo "rdaptrack"  - fetch RDAP info of a public ip adress
 echo "detectvlan" - fetch VLAN info of network interfaces
 echo "getpackets" - fetch network packets with packetmon to .pcapng file
+echo "lansweep"   - sweep local area network for active ip-adresses with arp and ping
 echo.
 echo [Websites and resolve]
 echo "getrevdns"  - get your own IP its reverse DNS
@@ -326,8 +328,8 @@ echo "kt"         - kill a running program
 echo "st"         - start a program
 echo.
 echo [Treat Detection]
-echo "badurl"   - show URLs flagged with dangers that are online
-echo "badip"    - show IPs flagged with dangers
+echo "badurl"    - show URLs flagged with dangers that are online
+echo "badip"     - show IPs flagged with dangers
 echo.
 echo [System Firewall]
 echo "gf"         - shows current firewall rules
@@ -407,6 +409,24 @@ echo PROGRAM FUNCTION COUNT: %functioncounts% functions
 REM loggingsection
 IF %logging%==on echo WARNING  [COMMAND EXECUTION] ON [DATE:%date% TIME:%time%] BY [USER:%USERNAME%] ON [DOMAIN:%USERDOMAIN%] >>%~dp0manowarlog.txt
 IF %logging%==on echo          [COMMAND THAT WAS EXECUTED: %catspal% ] >>%~dp0manowarlog.txt
+goto catspallin
+
+:lansweepp
+setlocal enabledelayedexpansion
+SET /P NETWORK=Enter your local network prefix without the host octet e.g. [192.168.1]: 
+echo Scanning %NETWORK%.1-254 ...
+for /L %%i in (1,1,254) do (
+    ping -n 1 -w 200 %NETWORK%.%%i | find "TTL=" >nul
+    if not errorlevel 1 (
+        echo Alive: %NETWORK%.%%i
+    )
+)
+echo.
+echo ARP table (local MACs learned):
+arp -a
+endlocal
+echo Local area network sweep completed.
+echo Caution! If the ICMP protocol is blocked by the target its firewall, the host wont be up but can still exist.
 goto catspallin
 
 :getpacketss
