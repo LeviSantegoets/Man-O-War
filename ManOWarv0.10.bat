@@ -27,13 +27,13 @@ set "tempvbs=%TEMP%\manowarwelcomemsg.vbs"
 cscript //nologo "%tempvbs%"
 del /f /q "%tempvbs%" 2>nul
 REM PRESENT FUNCTION VARIABLE:
-SET functioncounts=133
+SET functioncounts=136
 SET logging=notdefinedd
 SET loggingoutput=notdefineddd
 IF EXIST %~dp0loggingmodeon.txt SET logging=on
 IF EXIST %~dp0loggingoutputmodeon.txt SET loggingoutput=on
 :clss
-set vrsion=v0.09
+set vrsion=v0.10
 title Man o' War %vrsion% - A library for commandline tools.
 echo  __    __     ______     __   __        ______   __   __     __     ______     ______    
 echo /\ "-./  \   /\  __ \   /\ "-.\ \      /\  __ \  \/  /\ \  _ \ \   /\  __ \   /\  == \  
@@ -48,6 +48,9 @@ echo.
 :catspallin
 SET /P catspal=%~dp0Man o' War %vrsion%^^^_`^>
 IF %catspal%==help goto help
+IF %catspal%==getpackets goto getpacketss
+IF %catspal%==arcadegm goto arcadegmm
+IF %catspal%==reboot goto reboott
 IF %catspal%==playsnake goto playsnakee
 IF %catspal%==sshchat goto sshchatt
 IF %catspal%==gct goto gctt
@@ -202,6 +205,7 @@ echo [Man o' War]   COMMANDS   [use ctrl + C to escape a function]
 echo "shutdown"   - shuts down the windows system
 echo "shutlist"   - shut down list of computers with ADDS.
 echo "logoff"     - logs off from the windows system
+echo "reboot"     - force reboot the windows system
 echo "cls"        - clears the screen of the terminal
 echo "color"      - set a given terminal colour to the terminal
 echo "abort"      - exits the current program
@@ -301,6 +305,7 @@ echo "asnispip"   - fetch ASN and ISP info of a public ip-adress
 echo "getbgpip"   - fetch BGP info of a public ip-adress
 echo "rdaptrack"  - fetch RDAP info of a public ip adress
 echo "detectvlan" - fetch VLAN info of network interfaces
+echo "getpackets" - fetch network packets with packetmon to .pcapng file
 echo.
 echo [Websites and resolve]
 echo "getrevdns"  - get your own IP its reverse DNS
@@ -393,6 +398,7 @@ echo "initnyan"   - shows nyancat ascii animation
 echo.
 echo [Multiplayer and Singleplayer Games]
 echo "playsnake"  - play snake multiplayer over SSH
+echo "arcadegm"   - play various arcade games over SSH
 echo.
 echo [credits and cooperation]
 echo "showcreds"  - shows program credits
@@ -403,10 +409,87 @@ IF %logging%==on echo WARNING  [COMMAND EXECUTION] ON [DATE:%date% TIME:%time%] 
 IF %logging%==on echo          [COMMAND THAT WAS EXECUTED: %catspal% ] >>%~dp0manowarlog.txt
 goto catspallin
 
+:getpacketss
+setlocal enabledelayedexpansion
+echo Launching PacketMon framework...
+set "ts=%date:~10,4%-%date:~4,2%-%date:~7,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%"
+set "ts=%ts: =0%"
+set "CAPFILE=%TEMP%\pktmon_capture_%ts%.etl"
+set "PCAPFILE=%~dp0pktmon_capture_%ts%.pcapng"
+echo Output will stream below. Press CTRL+C to stop capture.
+pktmon filter remove
+pktmon start --capture --comp nics --pkt-size 0 --file-name "%CAPFILE%" --log-mode real-time
+IF %errorlevel% NEQ 0 (
+    echo Failed to start PacketMon. Check admin rights.
+    goto :cleanup
+) ELSE (
+    echo PacketMon started successfully.
+)
+echo Stopping PacketMon and converting to PCAPNG...
+pktmon stop
+IF %errorlevel% NEQ 0 (
+    echo Failed to stop PacketMon.
+    goto :cleanup
+) ELSE (
+    echo PacketMon stopped successfully.
+)
+pktmon etl2pcap "%CAPFILE%" --out "%PCAPFILE%"
+IF %errorlevel% NEQ 0 (
+    echo Failed to convert ETL to PCAPNG.
+    goto :cleanup
+) ELSE (
+    echo Conversion successful.
+)
+echo Capture saved to: %PCAPFILE%
+echo Opening with default viewer...
+start "" "%PCAPFILE%"
+IF %errorlevel% NEQ 0 (
+    echo Failed to open PCAPNG file.
+) ELSE (
+    echo PCAPNG file opened successfully.
+)
+:cleanup
+echo Info! Cleaning up temporary ETL file...
+del "%CAPFILE%" >nul 2>&1
+IF %errorlevel% NEQ 0 (
+    echo Failed to delete ETL file.
+) ELSE (
+    echo ETL file deleted.
+)
+endlocal
+goto catspallin
+
+:arcadegmm
+echo DANGER! you are about to establish a connection trough SSH secure shell, this may endanger network and system security.
+SET /P safebreakfivethousandanddee=Enter the following phrase to continue e.g. [synthetic_dawn]:
+IF %safebreakfivethousandanddee%==synthetic_dawn echo "synthetic_dawn" was given as input, security break has been lifted. & goto nomorebreakinfunctionadcvvvv
+echo Warning! invalid input given for last security paramitter, returning to mainframe.
+goto catspallin
+:nomorebreakinfunctionadcvvvv
+ssh gameroom@bitreich.org
+IF %errorlevel%==1 (
+   echo Warning! The program failed to call the SSH session, make sure you have an internet connection, proper security clearance and SSH enabled.
+) ELSE (
+echo Success! The program succeeded to call the SSH session.
+)
+goto catspallin
+
+:reboott
+echo Calling reboot from CMD...
+shutdown /r /f /t 0
+IF %errorlevel%==1 (
+   echo Warning! The program failed to call CMD to reboot the windows system with force.
+) ELSE (
+echo Success! The program succeeded to call CMD to reboot the windows system with force.
+)
+goto catspallin
+
 :playsnakee
 echo DANGER! you are about to establish a connection trough SSH secure shell, this may endanger network and system security.
 SET /P safebreakfivethousandanddcb=Enter the following phrase to continue e.g. [synthetic_dawn]:
 IF %safebreakfivethousandanddcb%==synthetic_dawn echo "synthetic_dawn" was given as input, security break has been lifted. & goto nomorebreakinfunctionadcvfgb
+echo Warning! invalid input given for last security paramitter, returning to mainframe.
+goto catspallin
 :nomorebreakinfunctionadcvfgb
 ssh sshtron.zachlatta.com
 IF %errorlevel%==1 (
@@ -421,6 +504,7 @@ echo DANGER! you are about to establish a connection trough SSH secure shell, th
 SET /P safebreakfivethousandandacb=Enter the following phrase to continue e.g. [synthetic_dawn]:
 IF %safebreakfivethousandandacb%==synthetic_dawn echo "synthetic_dawn" was given as input, security break has been lifted. & goto nomorebreakinfunctionadcvfgd
 echo Warning! invalid input given for last security paramitter, returning to mainframe.
+goto catspallin
 :nomorebreakinfunctionadcvfgd 
 ssh chat.shazow.net
 IF %errorlevel%==1 (
@@ -4905,7 +4989,7 @@ echo                                                    \____
 echo Special thanks to the Windows CMD community             \     
 echo and the countless online resources that inspired        /
 echo and supported the development of this project.    _____/            
-echo 
+echo.
 echo © [2025] [Levi Santegoets - the creator of this program]. All rights reserved.
 echo.
 goto catspallin
