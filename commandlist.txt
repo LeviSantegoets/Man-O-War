@@ -102,7 +102,11 @@
  "getbgpip"   - fetch BGP info of a public ip-adress
  "rdaptrack"  - fetch RDAP info of a public ip adress
  "detectvlan" - fetch VLAN info of network interfaces
- "getpackets" - fetch network packets with packetmon to .pcapng file
+ "getpackets" - fetch all network packets with packetmon to .pcapng file
+ "getippack"  - fetch network packets with packetmon of an ip-adress to .pcapn file
+ "getipport"  - fetch all packets with packetmon with a given port to .pcapng file
+ "portippkt"  - fetch packets of given ip with given port to .pcapng file
+ "lansweep"   - scan the local area network for active ip-adresses with arp and ping
 .
  [Websites and resolve]
  "getrevdns"  - get your own IP its reverse DNS
@@ -123,8 +127,8 @@
  "st"         - start a program
 .
  [Treat Detection]
- "badurl"   - show URLs flagged with dangers that are online
- "badip"    - show IPs flagged with dangers
+ "badurl"    - show URLs flagged with dangers that are online
+ "badip"     - show IPs flagged with dangers
 .
  [System Firewall]
  "gf"         - shows current firewall rules
@@ -199,3 +203,4 @@
 .
  [credits and cooperation]
  "showcreds"  - shows program credits
+.
