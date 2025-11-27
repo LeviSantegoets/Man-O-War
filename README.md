@@ -10,3 +10,6 @@ Development progress:
 For contributers:
 * if you have usefull functions to implement with apis curl vbs script powershell python or any other form like javascript pls send an email.
 * this is an opensource program you may fork it to the brim if you'd like to
+
+New Function Votes: "you may pick, we make all."
+https://strawpoll.com/2ayLQa21zn4
