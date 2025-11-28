@@ -16,8 +16,11 @@ https://strawpoll.com/2ayLQa21zn4
 
 good text editors:
 https://phrasefix.com/tools/add-text-to-each-line/
+
 https://www.youcanedit.com/remove-specific-words/
+
 https://www.sublimetext.com/
+
 
 >  [Man o' War]   COMMANDS   [use ctrl + C to escape a function]
 * "fullhelp"   - show all options at once
