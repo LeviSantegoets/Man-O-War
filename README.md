@@ -22,7 +22,7 @@ https://www.youcanedit.com/remove-specific-words/
 https://www.sublimetext.com/
 
 
->  [Man o' War]   COMMANDS   [use ctrl + C to escape a function]
+>  [Man o' War]   COMMANDS   [use ctrl + C to escape a function] Warning! may not include all.
 * "fullhelp"   - show all options at once
 * "shutdown"   - shuts down the windows system
 * "shutlist"   - shut down list of computers with ADDS.
