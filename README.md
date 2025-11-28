@@ -4,6 +4,9 @@ steps to use my program,
 
 > 2 enjoy...
 
+Why make it or use it?
+* There are many batchfiles that all have a unique purpose on a windows system, yett my batchfile has more that 200 functions with error_checking, example inputs and logging(underdevelopment). if you have a task to do mine can almost surely be of use. it can do a lot of networking and system administrative tasks to ease the workflow and fasten production. because i hate mouseclicking and navigating if it takes up a lot of time. the awnser is a file that with a couple of characters takes you to the place you want to be and does the stuff you probably needed to do fast.
+
 Development progress:
 * program command activity logging must be extended to cover the whole program, but this slowed down production so i will need time to do so.
 
