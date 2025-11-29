@@ -27,8 +27,8 @@ set "tempvbs=%TEMP%\manowarwelcomemsg.vbs"
 cscript //nologo "%tempvbs%"
 del /f /q "%tempvbs%" 2>nul
 REM [blacklistsecurity]
-REM goto checkblacklistagainstpubip
-REM :publicipallowed
+goto checkblacklistagainstpubip
+:publicipallowed
 REM [blacklistsecurity]
 REM PRESENT FUNCTION VARIABLE:
 SET functioncounts=209
@@ -7872,3 +7872,4 @@ echo.
 echo - [2025] [Levi Santegoets - the creator of this program]. All rights reserved.
 echo.
 goto catspallin
+
