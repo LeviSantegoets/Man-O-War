@@ -468,8 +468,6 @@ echo "checkhand"  - check TLS/SSL info aka handshake details
 echo "checkciph"  - check TLS/SSL handshake and cipher
 echo "checkhc"    - inspect HTTP status codes
 echo "fetchlinks" - fetch all used URLs from a webpage
-echo "initml"     - install microlink
-echo "executeml"  - execute microlink to get screenshot of url
 IF  %catspal%==ws goto catspallin
 :intervalTS
 echo [System Services and Tasks]
@@ -7954,3 +7952,4 @@ echo.
 echo - [2025] [Levi Santegoets - the creator of this program]. All rights reserved.
 echo.
 goto catspallin
+
