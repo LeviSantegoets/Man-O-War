@@ -1,4 +1,4 @@
-windows 7 compatible version comming soon
+DAILY NEWS UPDATES: [03'12'2025]  DONATIONS FOR THE HARD WORK AND SUPPORT ARE AVAILABLE SOON, PLS WHEN DONATING A SMALL AMOUNT, MAKE SURE TO VOTE OR LEAVE A FUNCTION FOR US TO CREATE BY MAIL OR THE LINK BELOW!!!
 
 
 steps to use my program,
@@ -12,6 +12,8 @@ Why make it or use it?
 
 Development progress:
 * program command activity logging must be extended to cover the whole program, but this slowed down production so i will need time to do so.
+
+* windows 7  32bit compatible version comming soon
 
 For contributers:
 * if you have usefull functions to implement with apis curl vbs script powershell python or any other form like javascript pls send an email.
