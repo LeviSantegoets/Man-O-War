@@ -1,6 +1,3 @@
-DAILY NEWS UPDATES: [03'12'2025]  DONATIONS FOR THE HARD WORK AND SUPPORT ARE AVAILABLE SOON, PLS WHEN DONATING A SMALL AMOUNT, MAKE SURE TO VOTE OR LEAVE A FUNCTION FOR US TO CREATE BY MAIL OR THE LINK BELOW!!!
-
-
 steps to use my program,
 
 > 1 go to the bottom of the file and add your public ipv4 to the whitelist. the whole world is banned by default for hardcoded security reasons.
